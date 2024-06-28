@@ -1,0 +1,49 @@
+CREATE DATABASE Shirts_DB;
+USE Shirts_DB;
+CREATE TABLE Shirts
+(
+    Shirt_ID INT NOT NULL PRIMARY KEY,
+    Article STRING,
+    Color STRING,
+    ShirtSize CHAR(2)
+);
+INSERT INTO SHIRTS
+Values
+(1, 'T-Shirt', 'White', 'S'),
+(2, 'T-Shirt', 'Green', 'S'),
+(3, 'Polo shirt', 'Black', 'M'),
+(4, 'Tank top', 'Blue', 'S'),
+(5, 'T-Shirt', 'Pink', 'S'),
+(6, 'Polo shirt', 'Red', 'M'),
+(7, 'Tank top', 'White', 'S'),
+(8, 'Tank top', 'Blue', 'M');
+
+SELECT * FROM shirts;
+
+INSERT INTO shirts
+VALUES
+(9, 'Polo Shirt', 'Purple', 'M');
+SELECT * FROM shirts;
+SELECT Article, COLOR FROM SHIRTS;
+SELECT * FROM SHIRTS
+WHERE ShirtSize = 'M';
+
+UPDATE Shirts SET ShirtSize = 'L'
+WHERE Article = 'Polo shirt';
+SELECT * FROM shirts;
+
+
+UPDATE Shirts SET ShirtSize = 'L'
+WHERE Article = 'Polo shirt';
+SELECT * FROM SHIRTS;
+
+UPDATE SHIRTS SET Color = 'Off White', ShirtSize = 'XL'
+WHERE Color = 'White';
+
+SELECT * FROM Shirts;
+
+DELETE FROM SHIRTS WHERE ARTICLE = 'Tank top';
+SELECT * FROM SHIRTS;
+
+DELETE FROM SHIRTS;
+SELECT * FROM SHIRTS;
